@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="F.C.E Solutions — flooring, concrete, demolition, hauling, leveling, excavation, land clearing, gravel delivery, and electrical work.">
+<title>F.C.E Solutions | Built Right. Built to Last.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070707;--panel:#111;--panel2:#171717;--gold:#c99a2e;--gold2:#e5bd55;--white:#f5f4ef;--muted:#a7a7a3;--line:#2a2a2a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,Arial,sans-serif;background:var(--bg);color:var(--white);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,5,5,.76);backdrop-filter:blur(16px);border-bottom:1px solid rgba(229,189,85,.18);transition:.3s}
+header.scrolled{background:rgba(5,5,5,.96)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:2rem;letter-spacing:3px;text-transform:uppercase}
+.logo span{color:var(--gold2)}
+.navlinks{display:flex;gap:28px;font-size:.78rem;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+.navlinks a{color:#ddd;position:relative}
+.navlinks a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--gold2);transition:.25s}
+.navlinks a:hover:after{width:100%}
+.cta{background:var(--gold);color:#080808!important;padding:12px 18px;border-radius:3px;font-weight:900;box-shadow:0 8px 24px rgba(201,154,46,.18)}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:
+radial-gradient(circle at 75% 35%,rgba(201,154,46,.18),transparent 28%),
+linear-gradient(115deg,#060606 20%,#121212 62%,#0a0a0a)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.15)),url("assets/brand-card.png") right center/auto 100% no-repeat;opacity:.16;filter:grayscale(1)}
+.hero-inner{position:relative;z-index:1;padding:150px 0 90px;width:100%}
+.kicker{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;font-weight:900;color:var(--gold2);margin-bottom:17px}
+h1,h2,h3{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase}
+h1{font-size:clamp(4rem,9vw,8.5rem);line-height:.84;letter-spacing:-2px;max-width:900px}
+h1 span{color:var(--gold2)}
+.hero-copy{max-width:720px;color:#c8c8c4;font-size:1.05rem;margin:27px 0 34px}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:3px;background:var(--gold);color:#080808;font-weight:900;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--gold);transition:.25s}
+.btn:hover{transform:translateY(-3px);background:var(--gold2);box-shadow:0 14px 30px rgba(201,154,46,.18)}
+.btn.secondary{background:transparent;color:var(--white);border-color:#555}
+.stats{display:flex;gap:35px;margin-top:65px;flex-wrap:wrap}
+.stat strong{display:block;font-family:"Barlow Condensed";font-size:2rem;color:var(--white)}
+.stat span{font-size:.7rem;color:#858582;text-transform:uppercase;letter-spacing:1.5px}
+section{padding:105px 0}
+.dark{background:#0c0c0c}.panelbg{background:#111}
+.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
+.section-top>div:first-child{max-width:700px}
+h2{font-size:clamp(2.7rem,5vw,4.7rem);line-height:.9;letter-spacing:-1px}
+.lead{color:var(--muted);max-width:700px;margin-top:14px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.service{background:linear-gradient(145deg,#191919,#101010);border:1px solid #292929;padding:28px;position:relative;overflow:hidden;min-height:250px;transition:.35s}
+.service:hover{transform:translateY(-8px);border-color:rgba(201,154,46,.55);box-shadow:0 18px 45px rgba(0,0,0,.35)}
+.service .num{font-family:"Barlow Condensed";font-size:4rem;color:#292929;position:absolute;right:15px;top:3px}
+.service .icon{font-size:1.5rem;color:var(--gold2);margin-bottom:22px}
+.service h3{font-size:1.75rem;letter-spacing:.5px}
+.service p{color:#aaa;margin-top:9px;font-size:.9rem}
+.service ul{list-style:none;margin-top:15px;display:flex;gap:7px;flex-wrap:wrap}
+.service li{border:1px solid #303030;color:#c9c9c6;padding:5px 8px;font-size:.68rem;text-transform:uppercase;letter-spacing:.5px}
+.band{padding:32px 0;background:linear-gradient(90deg,#9e731c,#e1b84d,#9e731c);color:#080808}
+.band .container{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.band h2{font-size:2.4rem}.band p{font-weight:700;font-size:.82rem}
+.band .btn{background:#090909;color:white;border-color:#090909}
+.gallery{display:grid;grid-template-columns:1.35fr .65fr .65fr;grid-template-rows:270px 270px;gap:12px}
+.gallery figure{position:relative;overflow:hidden;background:#1a1a1a;border:1px solid #292929}
+.gallery figure:first-child{grid-row:1/3}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.gallery figure:hover img{transform:scale(1.07)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.9));font-weight:800;text-transform:uppercase;font-size:.8rem;letter-spacing:1px}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}
+.brand-card{background:#0a0a0a;border:1px solid rgba(201,154,46,.35);padding:13px;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.brand-card img{width:100%}
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
+.check{padding:14px;background:#181818;border:1px solid #292929;color:#ddd;font-size:.82rem}
+.check b{color:var(--gold2);margin-right:7px}
+.area{background:linear-gradient(135deg,#101010,#171717);border-top:1px solid #242424;border-bottom:1px solid #242424}
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.map{min-height:380px;border:1px solid #353535;position:relative;overflow:hidden;background:
+radial-gradient(circle at 50% 45%,rgba(201,154,46,.24),transparent 12%),
+linear-gradient(135deg,#151515,#090909)}
+.map:before,.map:after{content:"";position:absolute;border:1px solid rgba(201,154,46,.25);border-radius:50%;inset:18% 25%}
+.map:after{inset:32% 38%}
+.pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-60%);width:18px;height:18px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 8px rgba(229,189,85,.13),0 0 35px rgba(229,189,85,.6)}
+.area-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.area-list div{border-left:2px solid var(--gold);padding:9px 12px;background:#191919;color:#c8c8c5;font-size:.8rem}
+.reviews{background:#0b0b0b}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.review{background:#151515;border:1px solid #292929;padding:27px;position:relative}
+.stars{color:var(--gold2);letter-spacing:3px;margin-bottom:13px}
+.review p{color:#c5c5c2;font-size:.9rem;font-style:italic}
+.review .name{margin-top:20px;font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:1px}
+.review .tag{color:#777;font-size:.68rem;margin-top:2px}
+.note{margin-top:22px;color:#666;font-size:.7rem}
+.quote{background:#121212}
+.quote-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:55px}
+.quote-info p{color:#aaa;margin:15px 0}
+.contact-big{font-family:"Barlow Condensed";font-size:2.6rem;color:var(--gold2);display:block;margin-top:22px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:.68rem;text-transform:uppercase;letter-spacing:1.2px;color:#888;font-weight:800}
+input,select,textarea{background:#0a0a0a;border:1px solid #333;color:white;padding:14px;border-radius:2px;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+textarea{min-height:135px;resize:vertical}
+.form-msg{grid-column:1/-1;display:none;padding:12px;background:rgba(201,154,46,.12);border:1px solid rgba(201,154,46,.35);color:#e8d6a3;font-size:.82rem}
+footer{padding:32px 0;border-top:1px solid #262626;color:#777;font-size:.72rem}
+footer .container{display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s ease,transform .75s ease}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){
+ .navlinks{display:none}.services-grid,.review-grid{grid-template-columns:1fr 1fr}
+ .gallery{grid-template-columns:1fr 1fr;grid-template-rows:250px 250px 250px}.gallery figure:first-child{grid-row:auto;grid-column:1/3}
+ .about-grid,.area-grid,.quote-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ section{padding:75px 0}.services-grid,.review-grid,.check-grid,.area-list,form{grid-template-columns:1fr}
+ .gallery{display:grid;grid-template-columns:1fr;grid-template-rows:250px 220px 220px 220px 220px}.gallery figure:first-child{grid-column:auto}
+ .band .container,footer .container{display:block}.band .btn{margin-top:15px}
+ .stats{gap:22px;margin-top:45px}
+ h1{font-size:4rem}
+}
+</style>
+</head>
+<body>
+<header id="header">
+ <div class="container nav">
+  <a class="logo" href="#home">F.C.E <span>Solutions</span></a>
+  <div class="navlinks">
+   <a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#area">Service Area</a>
+  </div>
+  <a class="cta" href="tel:+19132842685">913-284-2685</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-inner">
+  <div class="kicker">Professional Property & Construction Services</div>
+  <h1>Built Right.<br><span>Built to Last.</span></h1>
+  <p class="hero-copy">F.C.E Solutions delivers dependable flooring, concrete, demolition, hauling, leveling, excavation, land clearing, gravel delivery, and electrical work — with professional service from start to finish.</p>
+  <div class="actions"><a class="btn" href="#quote">Request a Free Estimate</a><a class="btn secondary" href="#services">Explore Services</a></div>
+  <div class="stats">
+   <div class="stat"><strong>9+</strong><span>Core Services</span></div>
+   <div class="stat"><strong>100%</strong><span>Project Focus</span></div>
+   <div class="stat"><strong>FREE</strong><span>Estimates</span></div>
+  </div>
+ </div>
+</section>
+
+<div class="band"><div class="container"><div><h2>Your project. Our solution.</h2><p>One professional team for multiple jobsite needs.</p></div><a class="btn" href="tel:+19132842685">Call F.C.E Solutions</a></div></div>
+
+<section id="services" class="dark">
+ <div class="container">
+  <div class="section-top reveal"><div><div class="kicker">Our Services</div><h2>Everything You Need.<br>Under One Roof.</h2><p class="lead">From finish work inside the property to heavy-duty site work outside, F.C.E Solutions is built to handle the job.</p></div></div>
+  <div class="services-grid">
+   <article class="service reveal"><span class="num">01</span><div class="icon">▰</div><h3>Flooring</h3><p>Professional installation for residential and commercial spaces.</p><ul><li>Vinyl</li><li>Engineered Wood</li><li>Laminate</li></ul></article>
+   <article class="service reveal"><span class="num">02</span><div class="icon">▱</div><h3>Concrete</h3><p>Concrete work and site preparation tailored to your project.</p><ul><li>Concrete Work</li><li>Finishing</li><li>Preparation</li></ul></article>
+   <article class="service reveal"><span class="num">03</span><div class="icon">◆</div><h3>Demolition</h3><p>Efficient demo work to clear the way for the next phase.</p><ul><li>Demo Work</li><li>Cleanup</li><li>Hauling</li></ul></article>
+   <article class="service reveal"><span class="num">04</span><div class="icon">⌁</div><h3>Excavation</h3><p>Site excavation and preparation for construction and property work.</p><ul><li>Excavations</li><li>Leveling</li><li>Site Prep</li></ul></article>
+   <article class="service reveal"><span class="num">05</span><div class="icon">◇</div><h3>Land Clearing</h3><p>Clear unwanted growth and prepare land for your next project.</p><ul><li>Land Clearing</li><li>Brush Removal</li><li>Hauling</li></ul></article>
+   <article class="service reveal"><span class="num">06</span><div class="icon">▰</div><h3>Gravel Delivery</h3><p>Material delivery for driveways, construction, landscaping, and more.</p><ul><li>Gravel Delivery</li><li>Material Hauling</li><li>Site Support</li></ul></article>
+   <article class="service reveal"><span class="num">07</span><div class="icon">⚡</div><h3>Electrical</h3><p>Electrical work for projects that require dependable installation and service.</p><ul><li>Electrical Work</li><li>Installation</li><li>Repairs</li></ul></article>
+   <article class="service reveal"><span class="num">08</span><div class="icon">⇄</div><h3>Hauling</h3><p>Move materials, debris, and project loads efficiently and responsibly.</p><ul><li>Hauling</li><li>Debris Removal</li><li>Material Transport</li></ul></article>
+   <article class="service reveal"><span class="num">09</span><div class="icon">✓</div><h3>Leveling</h3><p>Help create a better-prepared surface for your next project.</p><ul><li>Leveling</li><li>Site Prep</li><li>Project Support</li></ul></article>
+  </div>
+ </div>
+</section>
+
+<section id="gallery" class="panelbg">
+ <div class="container">
+  <div class="section-top reveal"><div><div class="kicker">Project Gallery</div><h2>Work That Speaks<br>For Itself.</h2><p class="lead">A visual showcase for flooring, concrete, site work, and electrical projects.</p></div><a class="btn secondary" href="#quote">Start Your Project</a></div>
+  <div class="gallery reveal">
+   <figure><img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=85" alt="Modern flooring installation"><figcaption>Flooring Installation</figcaption></figure>
+   <figure><img src="https://images.unsplash.com/photo-1517646287270-a5a9ca2f3b27?auto=format&fit=crop&w=800&q=85" alt="Concrete construction"><figcaption>Concrete Work</figcaption></figure>
+   <figure><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=85" alt="Construction site"><figcaption>Site Work</figcaption></figure>
+   <figure><img src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?auto=format&fit=crop&w=800&q=85" alt="Heavy equipment"><figcaption>Excavation & Hauling</figcaption></figure>
+   <figure><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=85" alt="Electrical work"><figcaption>Electrical Work</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="about" class="dark">
+ <div class="container about-grid">
+  <div class="brand-card reveal"><img src="assets/brand-card.png" alt="F.C.E Solutions branding"></div>
+  <div class="reveal"><div class="kicker">About F.C.E Solutions</div><h2>Professional Work.<br>Reliable Service.</h2><p class="lead">F.C.E Solutions is led by owner <strong>Daniel Ortega</strong>. We bring multiple construction and property services together so customers can work with one dependable team.</p><p class="lead">Our approach is straightforward: communicate clearly, show up prepared, do quality work, and leave the project built to last.</p><div class="check-grid"><div class="check"><b>✓</b> Free Estimates</div><div class="check"><b>✓</b> Reliable Service</div><div class="check"><b>✓</b> Quality Work</div><div class="check"><b>✓</b> Multiple Services</div></div></div>
+ </div>
+</section>
+
+<section id="area" class="area">
+ <div class="container area-grid">
+  <div class="map reveal"><div class="pin"></div></div>
+  <div class="reveal"><div class="kicker">Service Area</div><h2>Local Service.<br>Professional Results.</h2><p class="lead">F.C.E Solutions serves customers across the local area and surrounding communities. Contact us to confirm availability for your project.</p><div class="area-list"><div>Residential Projects</div><div>Commercial Projects</div><div>Property Improvements</div><div>Construction Sites</div><div>Interior Projects</div><div>Exterior Projects</div></div><a class="btn" style="margin-top:24px" href="tel:+19132842685">Check Availability</a></div>
+ </div>
+</section>
+
+<section id="reviews" class="reviews">
+ <div class="container">
+  <div class="section-top reveal"><div><div class="kicker">Customer Reviews</div><h2>Built on Trust.</h2><p class="lead">Add verified customer feedback here as your project history grows.</p></div></div>
+  <div class="review-grid">
+   <article class="review reveal"><div class="stars">★★★★★</div><p>“Professional, dependable, and focused on getting the job done right. We were very happy with the finished work.”</p><div class="name">Customer Review</div><div class="tag">Replace with verified customer name</div></article>
+   <article class="review reveal"><div class="stars">★★★★★</div><p>“Great communication from start to finish. The project was handled with attention to detail and professionalism.”</p><div class="name">Customer Review</div><div class="tag">Replace with verified customer name</div></article>
+   <article class="review reveal"><div class="stars">★★★★★</div><p>“Reliable service and quality work. We would recommend F.C.E Solutions for future projects.”</p><div class="name">Customer Review</div><div class="tag">Replace with verified customer name</div></article>
+  </div>
+  <div class="note">The reviews above are website-ready sample copy and should be replaced with real, verified customer testimonials before publishing.</div>
+ </div>
+</section>
+
+<section id="quote" class="quote">
+ <div class="container quote-grid">
+  <div class="quote-info reveal"><div class="kicker">Free Estimate</div><h2>Tell Us About Your Project.</h2><p>Fill out the form and we'll prepare your project details for follow-up. You can also call directly.</p><a class="contact-big" href="tel:+19132842685">913-284-2685</a><p>Flooring • Concrete • Demo • Hauling • Leveling • Excavation • Land Clearing • Gravel Delivery • Electrical</p></div>
+  <form id="quoteForm" class="reveal">
+   <div class="field"><label>Name</label><input required name="name" placeholder="Your name"></div>
+   <div class="field"><label>Phone</label><input required name="phone" type="tel" placeholder="Your phone number"></div>
+   <div class="field"><label>Email</label><input name="email" type="email" placeholder="you@email.com"></div>
+   <div class="field"><label>Service</label><select required name="service"><option value="">Select a service</option><option>Flooring</option><option>Concrete Work</option><option>Demolition</option><option>Hauling</option><option>Leveling</option><option>Excavation</option><option>Land Clearing</option><option>Gravel Delivery</option><option>Electrical Work</option><option>Multiple Services</option></select></div>
+   <div class="field full"><label>Project Details</label><textarea required name="details" placeholder="Tell us what you need done, project size, location, and any important details."></textarea></div>
+   <div class="field full"><label>Preferred Contact</label><select name="contact"><option>Phone Call</option><option>Text Message</option><option>Email</option></select></div>
+   <div id="formMsg" class="form-msg"></div>
+   <button class="btn" type="submit">Request My Free Estimate</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer><div class="container"><span>© 2026 F.C.E Solutions • Daniel Ortega, Owner</span><span>913-284-2685</span></div></footer>
+
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const data=new FormData(this);
+ const msg=`Hi Daniel, I would like a free estimate.%0A%0AName: ${encodeURIComponent(data.get('name'))}%0APhone: ${encodeURIComponent(data.get('phone'))}%0AService: ${encodeURIComponent(data.get('service'))}%0ADetails: ${encodeURIComponent(data.get('details'))}%0APreferred contact: ${encodeURIComponent(data.get('contact'))}`;
+ const box=document.getElementById('formMsg');
+ box.style.display='block';
+ box.innerHTML='Your request is ready. Tap the button below to send the project details by text message.';
+ const send=document.createElement('a');
+ send.className='btn'; send.style.marginTop='10px'; send.href='sms:+19132842685?body='+msg; send.textContent='Send Project Details by Text';
+ box.appendChild(document.createElement('br')); box.appendChild(send);
+});
+</script>
+</body>
+</html>
